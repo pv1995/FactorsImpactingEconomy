@@ -90,18 +90,18 @@
      <div>
         <h4>Factor 3 :Composition of Female Population Compared to Male</h4>
   
-        <p><b>Until 2004, women made up the majority of the world's population. However, in 2005 there was a sudden decline in the proportion of women, resulting in men becoming the dominant gender in terms of population. Presently, women account for 0.7% less of the global population than men.</b></p>
+        <p><b>Until 2003, women made up the majority of the world's population. However, in 2004 there was a sudden decline in the proportion of women, resulting in men becoming the dominant gender in terms of population. Presently, women account for 0.7% less of the global population than men.</b></p>
         <h6>Composition of Female Population in Developed & Developing Countries as Compared to Male (+ve indicates more female, -ve indicates more male)</h6>
         <p class="description">The graphs below illustrates how the proportion of women has changed relative to men in both developed and developing countries over the last 50 years. Use the checkbox below to switch between developed and developing or select both developed and developing countries and see the world trend. </p>
         <p class="italic">**Hover over the bars for more information</p>
-        <div id="observablehq-viewof-status-a048e41b"></div>
-        <div id="observablehq-female_pop_diff-a048e41b"></div>
+        <div id="observablehq-viewof-status-297859d5"></div>
+        <div id="observablehq-female_pop_diff-297859d5"></div>
         
         <p><b>Oman experienced the most substantial decline in the proportion of its female population among all developing countries. In 1971, the country had 1% more females than males, but by 2020, the gender imbalance had reversed, with 32% fewer women than men.</b></p>
         <h6>Change in Composition of Female Population in Developing Countries as Compared to Male</h6>
         <p class="italic">**Hover over the line for more information</p>
         <div class="women_diff_wrapper">
-          <div id="observablehq-men_women_pop_diffs-a048e41b"></div>
+          <div id="observablehq-men_women_pop_diffs-297859d5"></div>
         </div>
         <a href="https://www.kaggle.com/datasets/ahmethoso/wpp-population-by-age-and-sex?select=PopulationByAgeSex.csv">Data Source</a>
         <p>
@@ -189,7 +189,7 @@
             <div id="observablehq-viewof-filtered_country-8a2a6348"></div>
           </div>       -->
           <!-- <div id="observablehq-viewof-country_gender_diff-8a2a6348"></div> -->
-          <div id="observablehq-viewof-country_gender_diff-8906f1ed"></div>
+          <div id="observablehq-viewof-country_gender_diff-0ac933c2"></div>
         <h6>Percentage difference between female and male population ove the last 50 years 👆</h6>
         <a href="https://www.kaggle.com/datasets/ahmethoso/wpp-population-by-age-and-sex?select=PopulationByAgeSex.csv">Data Source</a>
         
@@ -217,9 +217,9 @@
       <div id="observablehq-country_age_group-89bc2bc2"></div>
       <h4>Gender-Based Population Composition in the Country</h4>
       <div class="label-wrapper">
-        <div id="observablehq-viewof-filtered_country-8a2a6348"></div>
+        <div id="observablehq-viewof-filtered_country-41221ab6"></div>
       </div>      
-      <div id="observablehq-viewof-country_gender_diff-8a2a6348"></div>
+      <div id="observablehq-viewof-country_gender_diff-41221ab6"></div>
      </section>
      <footer>
       <p>Copyright © 2023, Parthivi Varhsney &nbsp;
@@ -241,10 +241,12 @@
           if (name === "age_group_country_wise_pct_faceted") return new Inspector(document.querySelector("#observablehq-age_group_country_wise_pct_faceted-029844f2"));
         });
         new Runtime().module(define, name => {
-          if (name === "viewof status") return new Inspector(document.querySelector("#observablehq-viewof-status-a048e41b"));
-          if (name === "female_pop_diff") return new Inspector(document.querySelector("#observablehq-female_pop_diff-a048e41b"));
-          if (name === "men_women_pop_diffs") return new Inspector(document.querySelector("#observablehq-men_women_pop_diffs-a048e41b"));
-          return ["age_group_series","age_group_y","age_group_color","age_group_yAxis"].includes(name);
+          new Runtime().module(define, name => {
+            if (name === "viewof status") return new Inspector(document.querySelector("#observablehq-viewof-status-297859d5"));
+            if (name === "female_pop_diff") return new Inspector(document.querySelector("#observablehq-female_pop_diff-297859d5"));
+            if (name === "men_women_pop_diffs") return new Inspector(document.querySelector("#observablehq-men_women_pop_diffs-297859d5"));
+            return ["age_group_series","age_group_y","age_group_color","age_group_yAxis"].includes(name);
+          });
         });
         new Runtime().module(define, name => {
           if (name === "LE_Country") return new Inspector(document.querySelector("#observablehq-LE_Country-cb55aaf5"));
@@ -253,7 +255,7 @@
           if (name === "country_age_group") return new Inspector(document.querySelector("#observablehq-country_age_group-24c6f903"));
         });
         new Runtime().module(define, name => {
-          if (name === "viewof country_gender_diff") return new Inspector(document.querySelector("#observablehq-viewof-country_gender_diff-8906f1ed"));
+          if (name === "viewof country_gender_diff") return new Inspector(document.querySelector("#observablehq-viewof-country_gender_diff-0ac933c2"));
         });
         new Runtime().module(define, name => {
           if (name === "LE_Country") return new Inspector(document.querySelector("#observablehq-LE_Country-46d421b5"));
@@ -266,10 +268,10 @@
           return ["LE_Country","viewof country_gender_diff","answer"].includes(name);
          });
          new Runtime().module(define, name => {
-          if (name === "viewof filtered_country") return new Inspector(document.querySelector("#observablehq-viewof-filtered_country-8a2a6348"));
-          if (name === "viewof country_gender_diff") return new Inspector(document.querySelector("#observablehq-viewof-country_gender_diff-8a2a6348"));
-          return ["LE_Country","country_age_group","answer"].includes(name);
-        });
+          if (name === "viewof filtered_country") return new Inspector(document.querySelector("#observablehq-viewof-filtered_country-41221ab6"));
+            if (name === "viewof country_gender_diff") return new Inspector(document.querySelector("#observablehq-viewof-country_gender_diff-41221ab6"));
+            return ["LE_Country","country_age_group","answer"].includes(name);
+          });
       </script>
       <!-- <script type="module" src="/main.js"></script> -->
   </body>
